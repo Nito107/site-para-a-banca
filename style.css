@@ -1,0 +1,364 @@
+/* ===== RESET ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== VARIÁVEIS DE CORES ===== */
+:root {
+    --cor-principal: #8b0000;
+    --cor-principal-clara: #b22222;
+    --cor-borda-principal: #c15a5a;
+    --cor-texto: #f2eeee;
+    --cor-destaque: #ff9999;
+    --cor-fundo: #1a0808;
+    --cor-fundo-clara: #300d0d;
+    --cor-card: rgba(58, 15, 15, 0.88);
+    --cor-borda-card: #713333;
+
+}
+
+/* ===== FUNDO DO SITE ===== */
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor-texto);
+    line-height: 1.8;
+
+    padding: 35px 6% 0;
+
+    background: repeating-linear-gradient(
+        90deg,
+        var(--cor-fundo) 0,
+        var(--cor-fundo) 180px,
+        var(--cor-fundo-clara) 180px,
+        var(--cor-fundo-clara) 360px
+    );
+}
+
+/* ===== TÍTULO PRINCIPAL ===== */
+
+h1 {
+    margin-bottom: 35px;
+    padding: 45px 25px;
+
+    color: #ffffff;
+    font-size: 36px;
+    text-align: center;
+
+    background: rgba(126, 37, 37, 0.85);
+    border: 2px solid #a56b6b;
+    border-radius: 12px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+}
+
+/* ===== MENU DE NAVEGAÇÃO ===== */
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    margin-bottom: 35px;
+    padding: 20px;
+
+    background: rgba(139, 52, 52, 0.9);
+    border: 1px solid #666666;
+    border-radius: 12px;
+}
+
+.menu a {
+    display: inline-block;
+    padding: 12px 20px;
+
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+
+    background-color: var(--cor-principal);
+    border: 1px solid var(--cor-borda-principal);
+    border-radius: 7px;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.menu a:hover,
+.menu a:focus-visible {
+    background-color: var(--cor-principal-clara);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(126, 37, 37, 0.4);
+}
+
+.menu a:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+
+/* ===== TÍTULOS DAS SEÇÕES ===== */
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 18px;
+    padding: 14px 18px;
+
+    color: #ffffff;
+    font-size: 23px;
+
+    background: rgba(126, 37, 37, 0.85);
+    border-left: 5px solid #c77a7a;
+    border-radius: 7px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+    scroll-margin-top: 20px;
+    transition: 0.3s ease;
+}
+
+/* ===== SUBTÍTULOS ===== */
+
+h3 {
+    margin: 25px 0 15px;
+
+    color: var(--cor-destaque);
+    font-size: 19px;
+}
+
+/* ===== PARÁGRAFOS ===== */
+
+p {
+    margin-bottom: 22px;
+    padding: 25px;
+
+    text-align: justify;
+
+    background: var(--cor-card);
+    border: 1px solid var(--cor-borda-card);
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* ===== LISTAS ===== */
+
+ul {
+    margin-bottom: 25px;
+    padding: 25px 25px 25px 48px;
+
+    list-style-type: square;
+
+    background: var(--cor-card);
+    border: 1px solid var(--cor-borda-card);
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+li {
+    margin-bottom: 12px;
+    padding-left: 5px;
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+li::marker {
+    color: #bd6969;
+}
+
+/* ===== TEXTOS IMPORTANTES ===== */
+
+strong {
+    color: var(--cor-destaque);
+}
+
+/* ===== EFEITOS DOS CARDS ===== */
+
+p:hover,
+ul:hover {
+    border-color: #9c5555;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(126, 37, 37, 0.18);
+}
+
+/* ===== RODAPÉ ===== */
+
+.rodape {
+    width: 100vw;
+
+    margin-top: 60px;
+    margin-left: calc(50% - 50vw);
+    padding: 40px 8%;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #5a1919,
+        var(--cor-principal),
+        #4b1717
+    );
+
+    border-top: 1px solid var(--cor-borda-principal);
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.25);
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.rodape:hover {
+    border-color: #c17b7b;
+    box-shadow: 0 -5px 25px rgba(126, 37, 37, 0.25);
+}
+
+.rodape h3 {
+    margin: 0 0 15px;
+
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.rodape p {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    padding: 10px;
+
+    color: #f0dddd;
+    text-align: center;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+}
+
+.rodape p:hover {
+    transform: none;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.rodape span {
+    display: block;
+    padding-top: 15px;
+
+    color: #d6aaaa;
+    font-size: 13px;
+
+    border-top: 1px solid var(--cor-borda-principal);
+}
+
+/* ===== BARRA DE ROLAGEM ===== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cor-fundo);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--cor-principal);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a34545;
+}
+
+/* ===== CELULAR ===== */
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 15px 0;
+    }
+
+    h1 {
+        padding: 30px 15px;
+        font-size: 26px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .menu a {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+    p {
+        padding: 18px;
+        text-align: left;
+    }
+
+    ul {
+        padding: 20px 20px 20px 38px;
+    }
+
+    .rodape {
+        padding: 30px 15px;
+    }
+
+    .rodape h3 {
+        font-size: 19px;
+    }
+
+    .rodape span {
+        font-size: 12px;
+    }
+}
+
+/* ===== REDUZ ANIMAÇÕES QUANDO SOLICITADO ===== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}
